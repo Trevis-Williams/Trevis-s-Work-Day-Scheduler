@@ -15,13 +15,13 @@ $(function () {
 
   // Loop through each time block
   $(".time-block").each(function() {
-    var blockHour = parseInt($(this).attr("id").split("-")[1]);
+    var blockHour = $(this).data("hour");
 
     // Add classes based on the current hour
-    if (blockHour < currentHour) {
-      $(this).addClass("past");
-    } else if (blockHour === currentHour) {
+    if (blockHour === currentHour) {
       $(this).addClass("present");
+    } else if (blockHour < currentHour) {
+      $(this).addClass("past");
     } else {
       $(this).addClass("future");
     }
@@ -54,6 +54,8 @@ $(function () {
   // Display the current date in the header of the page.
   $('#currentDay').text(dayjs().format('MMMM D, YYYY hA'));
 });
+
+$(".local-store").text("Appointment added to local storage").show();
 //This code will apply the appropriate class (past, present, or future) to each time block based on the current time. The class will change dynamically as time progresses.
 
 
