@@ -31,17 +31,17 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #4070ad;
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #1ed345;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #ff6661;
   color: white;
 }
 
@@ -61,6 +61,7 @@ textarea {
 .local-store {
   color: red;
   font-family: initial;
+  padding-bottom: 20px;
 }
 header h1 {
   display: flex;

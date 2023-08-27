@@ -11,12 +11,12 @@ $(function () {
   });
 
 
-  var currentHour = dayjs().hour();
-
+ var currentHour = dayjs().hour();
+ 
   // Loop through each time block
   $(".time-block").each(function() {
     var blockHour = $(this).data("hour");
-
+    console.log(blockHour)
     // Add classes based on the current hour
     if (blockHour === currentHour) {
       $(this).addClass("present");
@@ -44,8 +44,9 @@ $(function () {
     if (userInput !== "") {
       localStorage.setItem(blockId, userInput);
       // Display appointment added message
-      $(".local-store").text("Appointment added to local storage").show();
-    }
+      $(".local-store").text("Appointment added to local storage✅").show();
+  }
+  
   });
 
 
@@ -55,13 +56,4 @@ $(function () {
   $('#currentDay').text(dayjs().format('MMMM D, YYYY hA'));
 });
 
-$(".local-store").text("Appointment added to local storage").show();
-//This code will apply the appropriate class (past, present, or future) to each time block based on the current time. The class will change dynamically as time progresses.
 
-
-
-
-
-
-
-//when it hits a certain time make it so the class is chnaged to past present or CSSFontFeatureValuesRule
